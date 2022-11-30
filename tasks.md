@@ -4,7 +4,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 
 1) Find all the matches from 2017.
 
-```sql
+```sqlgit
 SELECT * FROM matches WHERE season = '2017'
 
 
@@ -46,7 +46,7 @@ SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%'
 6) How many different teams have played in matches recorded in a French division?
 
 ```sql
-SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR division_code = 'F2'>
+SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR division_code = 'F2'
 
 
 ```
@@ -62,7 +62,7 @@ SELECT * FROM matches WHERE (hometeam = 'Huddersfield' OR awayteam = 'Huddersfie
 8) How many draws were there in the Eredivisie between 2010 and 2015?
 
 ```sql
-SELECT code FROM division WHERE name = 'Eredivisie'; 
+SELECT * FROM divisions WHERE name = 'Eredivisie'; 
 SELECT COUNT (*) FROM matches WHERE division_code= 'N1' AND ftr = 'D' and season BETWEEN 2010 AND 2015
 
 
